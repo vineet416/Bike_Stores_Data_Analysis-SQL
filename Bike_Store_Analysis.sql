@@ -49,7 +49,7 @@ GROUP BY
 	c.category_name, year, month
 ORDER BY 
 	year, month, total_sales_amount DESC;
-    
+
 
 -- 2. Customer Insights:
 -- A. How many orders were placed by each customer, and what is the total revenue generated from them?
@@ -283,17 +283,20 @@ ORDER BY
 
 
 -- 6. Customer Retention:
--- A. How many customers placed more than one order within the last year?
-SELECT COUNT(customers_with_multiple_orders) AS customers_with_multiple_orders
-FROM (
-	SELECT 
-		COUNT(DISTINCT customer_id) AS customers_with_multiple_orders
-	FROM 
-		Orders
-	WHERE 
-		YEAR(order_date) = 2018 
-	GROUP BY 
-		customer_id
-	HAVING 
-		COUNT(order_id) > 1
-) sub;
+-- A. Customers who placed more than one order within the last year
+SELECT 
+    c.Customer_id, 
+    CONCAT(c.first_name,' ',c.last_name) AS customer_name, 
+    COUNT(o.order_id) AS total_orders
+FROM 
+    Customers c
+JOIN 
+    Orders o ON c.customer_id = o.customer_id
+WHERE 
+    YEAR(o.order_date) = 2018
+GROUP BY 
+    c.Customer_id, customer_name
+HAVING 
+    total_orders > 1
+ORDER BY
+    total_orders DESC;

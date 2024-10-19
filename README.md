@@ -67,7 +67,8 @@ The schema contains the following tables:
         year, total_sales_amount DESC;
     ```
     - This query calculates the total sales amount, considering discounts, for each product across different years.
-![image](https://github.com/user-attachments/assets/e465102e-22ab-4b2d-9224-ecc8d18fe2f6)
+  
+![image](https://github.com/user-attachments/assets/91b8a36c-7b59-4186-ad57-64d54622d121)
 
 
 - **B. Top-selling products by quantity**:
@@ -85,7 +86,8 @@ The schema contains the following tables:
     LIMIT 10;
     ```
     - This query returns the top 10 best-selling products based on total quantity sold.
-![image](https://github.com/user-attachments/assets/3cf0b360-670a-4ccf-acaf-3b11875e8039)
+![image](https://github.com/user-attachments/assets/5704bd09-34e0-4ef3-96bf-0eb1ad4bb861)
+
 
 
 - **C. Monthly sales trends across categories**:
@@ -107,7 +109,8 @@ The schema contains the following tables:
         year, month, total_sales_amount DESC;
     ```
     - This query shows sales trends by month for different product categories.  
-![image](https://github.com/user-attachments/assets/fcb0ef84-a265-4b4f-a91f-59dcf9efe56b)
+![image](https://github.com/user-attachments/assets/81991bd3-4ed7-45a4-a547-3f06828b0f91)
+
 
 
 ### 2. Customer Insights
@@ -130,7 +133,8 @@ The schema contains the following tables:
         total_revenue DESC;
     ```
     - This query provides details on how many orders each customer has placed and the total revenue generated.
-![image](https://github.com/user-attachments/assets/75c9a5c6-483f-40ff-93a6-2b7e98bc47a4)
+![image](https://github.com/user-attachments/assets/52eabe5e-e7d6-4d11-8399-e214e4ad1b95)
+
 
 
 - **B. Top cities by number of orders**:
@@ -148,7 +152,8 @@ The schema contains the following tables:
     LIMIT 10;
     ```
     - These queries display the citieswith the most orders.  
-![image](https://github.com/user-attachments/assets/a24db76e-6e54-4214-925f-efb4dd1a8a65)
+![image](https://github.com/user-attachments/assets/bf80f875-e9c0-4163-96a2-1d4d3f635f0c)
+
 
 
 - **C. Top states by number of orders**:
@@ -165,7 +170,8 @@ The schema contains the following tables:
         total_orders DESC;
     ```
     - These queries display the states with the most orders.  
-![image](https://github.com/user-attachments/assets/4e08f066-9907-40e6-bae6-189258e91337)
+![image](https://github.com/user-attachments/assets/71e8658f-7a60-4bc8-adef-b75708173fd1)
+
 
 
 - **D. Customers with no orders in the past year**:
@@ -189,6 +195,7 @@ The schema contains the following tables:
     ```
     - Identifies customers who have not placed any orders in the last year.  
 ![image](https://github.com/user-attachments/assets/f7c86a6a-0403-4bbb-9341-f60a7b359ed4)
+    - The output of the query indicates that there are no customers who did not place any orders in the year 2017.
 
 
 ### 3. Product Performance
@@ -209,7 +216,8 @@ The schema contains the following tables:
     LIMIT 1;
     ```
     - Returns the top product categories by sales volume.  
-![image](https://github.com/user-attachments/assets/cf21b072-4a10-414c-a9a1-d33e474b317c)
+![image](https://github.com/user-attachments/assets/d86f6ea0-f0d2-4c97-9e1c-c87cf5d11edf)
+
 
 
 - **B. Least popular product categories by sales volume**:
@@ -229,7 +237,8 @@ The schema contains the following tables:
     LIMIT 1;
     ```
     - Returns the product categories with the lowest sales volume.  
-![image](https://github.com/user-attachments/assets/daa551dd-4e47-4f47-aed4-528203c78893)
+![image](https://github.com/user-attachments/assets/f78ddb52-fe76-400a-b13e-098b17d40f57)
+
 
 
 - **C. Product sales performance across different brands**:
@@ -250,7 +259,8 @@ The schema contains the following tables:
         total_sales_amount DESC;
     ```
     - Compares sales performance across different brands in terms of revenue and quantity sold.  
-![image](https://github.com/user-attachments/assets/b1ecbba1-8834-4e6d-8713-70f7960c4345)
+![image](https://github.com/user-attachments/assets/94bd36f6-3e1e-471d-b5bb-614f9e0c3a36)
+
 
 
 - **D. Average discount provided on each product**:
@@ -269,6 +279,7 @@ The schema contains the following tables:
     ```
     - Shows the average discount provided for each product across all orders.  
 ![image](https://github.com/user-attachments/assets/967222eb-1538-4053-a4bd-e316275474f2)
+    - The output of the query indicates that there are no Discount on any Products.
 
 
 ### 4. Inventory Management
@@ -287,7 +298,8 @@ The schema contains the following tables:
         p.product_id, st.quantity DESC;
     ```
     - This query shows which stores have the highest stock levels for each product.  
-![image](https://github.com/user-attachments/assets/ebcc757f-8731-4412-9105-318d9b5764b7)
+![image](https://github.com/user-attachments/assets/af94d350-4eb9-4810-b711-f3e4a4cf5b06)
+
 
 
 - **B. Stores with the lowest stock quantities for each product**:  
@@ -305,7 +317,8 @@ The schema contains the following tables:
         p.product_id, st.quantity;
     ```
     - This query shows which stores have the lowest stock levels for each product.  
-![image](https://github.com/user-attachments/assets/ccee2345-cebb-400a-8c33-746a0691e8ef)
+![image](https://github.com/user-attachments/assets/960a64ba-16b0-47d6-8ba6-8600b15355fa)
+
 
 
 - **C. Products that are low in stock across all stores**:
@@ -348,7 +361,8 @@ The schema contains the following tables:
     LIMIT 1;
     ```
     - Determines which store has the highest number of orders and generated the most revenue.  
-![image](https://github.com/user-attachments/assets/d89269cb-cace-46c2-bd47-09facde46a2b)
+![image](https://github.com/user-attachments/assets/12e3c4a6-f964-4a62-8331-63f8506eb9a6)
+
 
 
 - **B. Total sales generated by each staff member**:
@@ -368,7 +382,8 @@ The schema contains the following tables:
         total_sales_amount DESC;
     ```
     - Shows the total sales generated by each staff member.  
-![image](https://github.com/user-attachments/assets/13c56633-1a27-4f53-961f-f6f74c87480f)
+![image](https://github.com/user-attachments/assets/f430b1f9-1066-4635-a70e-fea6a6aa3dda)
+
 
 
 - **C. Staff performance across different stores**:
@@ -391,7 +406,8 @@ The schema contains the following tables:
         total_sales_amount DESC;
     ```
     - Compares the sales performance of staff members across different stores.  
-![image](https://github.com/user-attachments/assets/77b90ea1-b02d-4026-a7bb-e8b0b04bd6de)
+![image](https://github.com/user-attachments/assets/33200eb2-2562-4721-9758-25fed337cc73)
+
 
 
 ### 6. Customer Retention
@@ -406,14 +422,17 @@ The schema contains the following tables:
     JOIN 
         Orders o ON c.customer_id = o.customer_id
     WHERE 
-        YEAR(o.order_date) = 2019
+        YEAR(o.order_date) = 2018
     GROUP BY 
         c.Customer_id, customer_name
     HAVING 
-        total_orders > 1;
+        total_orders > 1
+    ORDER BY
+      total_orders DESC;
     ```
     - Returns the count of customers who placed multiple orders in the last year.  
-![image](https://github.com/user-attachments/assets/bb1b6727-e0a2-4aaa-9a2e-08662083fb2c)
+![image](https://github.com/user-attachments/assets/65aafe97-4ec3-40d4-b633-9d265b51a668)
+    - There are 20 Customers with Multiple Orders in year 2018.
 
 
 ## Conclusion
